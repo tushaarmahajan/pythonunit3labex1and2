@@ -1,0 +1,31 @@
+import numpy as np
+
+# 1. Create a 3x3 NumPy array filled with random integers between 1 and 10.
+array = np.random.randint(1, 11, size=(3, 3))
+print("Original 3x3 Array:\n", array)
+
+# 2. Find the sum of all the elements in the array.
+array_sum = np.sum(array)
+print("Sum of all elements:", array_sum)
+
+# 3. Calculate the mean value of the elements in the array.
+array_mean = np.mean(array)
+print("Mean value of elements:", array_mean)
+
+# 4. Identify the minimum and maximum values in the array.
+array_min = np.min(array)
+array_max = np.max(array)
+print("Minimum value:", array_min)
+print("Maximum value:", array_max)
+
+# 5. Reshape the array into a 1x9 array.
+reshaped_array = np.reshape(array, (1, 9))
+print("Reshaped 1x9 Array:\n", reshaped_array)
+
+# 6. Sort the reshaped array in ascending order.
+sorted_array = np.sort(reshaped_array)
+print("Sorted 1x9 Array:\n", sorted_array)
+
+# 7. Find the index of the maximum value in the sorted array.
+max_index = np.argmax(sorted_array)
+print("Index of maximum value in sorted array:", max_index)

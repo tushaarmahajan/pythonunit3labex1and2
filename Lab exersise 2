@@ -1,0 +1,21 @@
+import numpy as np
+
+# 1. Create a 5x5 identity matrix using NumPy.
+identity_matrix = np.eye(5)
+print("5x5 Identity Matrix:\n", identity_matrix)
+
+# 2. Create a second 5x5 array filled with random floating-point numbers between 0 and 1.
+random_array = np.random.rand(5, 5)
+print("Original 5x5 Random Array:\n", random_array)
+
+# 3. Replace all values in the second array greater than 0.5 with 1, and all values less than or equal to 0.5 with 0.
+modified_array = np.where(random_array > 0.5, 1, 0)
+print("Modified 5x5 Array:\n", modified_array)
+
+# 4. Find the indices of the elements that are equal to 1 in the modified array.
+indices_of_ones = np.argwhere(modified_array == 1)
+print("Indices of elements equal to 1:\n", indices_of_ones)
+
+# 5. Stack the identity matrix and the modified array horizontally.
+stacked_array = np.hstack((identity_matrix, modified_array))
+print("Stacked Array (Identity Matrix and Modified Array):\n", stacked_array)
